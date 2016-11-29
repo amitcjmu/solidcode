@@ -23,6 +23,11 @@ public class RockPaper {
 		this.playerTwo = playerTwo;
 	}
 	
-	
+	public String checkWinner() {
+		List<String> playerEntries = Arrays.asList(playerOne, playerTwo);
+		Collections.sort(playerEntries);
+		
+		return null;
+	}
 	
 }

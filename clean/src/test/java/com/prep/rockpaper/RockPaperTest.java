@@ -8,4 +8,11 @@ import java.util.List;
 
 public class RockPaperTest {
 	
+	private RockPaper rockPaper;
+	
+	@Test
+	public void rockWins(){
+		rockPaper = new RockPaper("ROCK","PAPER");
+		
+	}
 }

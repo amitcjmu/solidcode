@@ -9,5 +9,14 @@ import java.util.List;
 
 public class RockPaper {
 
+	private String playerOne;
+	private String playerTwo;
+	
+	
+	public RockPaper(String playerOne, String playerTwo){
+		this.playerOne = playerOne;
+		this.playerTwo = playerTwo;
+	}
+	
 	
 }

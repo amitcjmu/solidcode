@@ -7,6 +7,11 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+
+/*
+ * Game for Rock paper scissor 
+ * implementation logic for the game
+ */ 
 public class RockPaper {
 
 	private String playerOne;
@@ -17,6 +22,7 @@ public class RockPaper {
 		this.playerOne = playerOne;
 		this.playerTwo = playerTwo;
 	}
+	
 	
 	
 }

@@ -13,6 +13,7 @@ public class RockPaperTest {
 	@Test
 	public void rockWins(){
 		rockPaper = new RockPaper("ROCK","PAPER");
-		
+		String winner = rockPaper.checkWinner;
+		assertEquals(winner, "ROCK");
 	}
 }

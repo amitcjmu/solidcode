@@ -24,7 +24,7 @@ public class PerfectNumber {
 		return false;
 	}
 	
-	public static final int[] factors(Integer factorsOf) {
+	public int[] factors(Integer factorsOf) {
 	    return IntStream.rangeClosed(1, factorsOf)
 	            .filter(f -> factorsOf % f == 0)
 	            .toArray();

@@ -46,4 +46,51 @@ public class StockPriceTest {
 		assertEquals(totalPrice, EmptyItemvalue);
 	}
 	
+	
+	@Test
+	public void total_price_stock_value_AA()
+	{
+		String item = "AA";
+		Integer EmptyItemvalue = 100;
+		CalculateStockPrice calculateStockPrice = new StockA();
+		calculateStockPrice = new StockADecorator(calculateStockPrice);
+		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
+		assertEquals(totalPrice, EmptyItemvalue);
+	}
+	
+	
+	@Test
+	public void total_price_stock_value_BB()
+	{
+		String item = "BB";
+		Integer EmptyItemvalue = 60;
+		CalculateStockPrice calculateStockPrice = new StockB();
+		calculateStockPrice = new StockBDecorator(calculateStockPrice);
+		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
+		assertEquals(totalPrice, EmptyItemvalue);
+	}
+	
+	
+	@Test
+	public void total_price_stock_value_CC()
+	{
+		String item = "CC";
+		Integer EmptyItemvalue = 40;
+		CalculateStockPrice calculateStockPrice = new StockC();
+		calculateStockPrice = new StockCDecorator(calculateStockPrice);
+		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
+		assertEquals(totalPrice, EmptyItemvalue);
+	}
+	
+	@Test
+	public void total_price_stock_value_DD()
+	{
+		String item = "CC";
+		Integer EmptyItemvalue = 30;
+		CalculateStockPrice calculateStockPrice = new StockD();
+		calculateStockPrice = new StockDDecorator(calculateStockPrice);
+		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
+		assertEquals(totalPrice, EmptyItemvalue);
+	}
+	
 }

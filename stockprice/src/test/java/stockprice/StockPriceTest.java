@@ -8,9 +8,9 @@ public class StockPriceTest {
 	@Test
 	public void stock_value_empty() {
 		String item = "";
-		Integer value = 0;
+		Integer EmptyItemvalue = 0;
 		CalculateStockPrice calculateStockPrice = new CalculateStockPrice();
 		Integer totalPrice = calculateStockPrice.getTotalPriceByItem(item);
-		assertEquals(totalPrice, value);
+		assertEquals(totalPrice, EmptyItemvalue);
 	}
 }

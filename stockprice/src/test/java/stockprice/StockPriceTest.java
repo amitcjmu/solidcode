@@ -13,4 +13,15 @@ public class StockPriceTest {
 		Integer totalPrice = calculateStockPrice.getTotalPriceByItem(item);
 		assertEquals(totalPrice, EmptyItemvalue);
 	}
+	
+	@Test
+	public void stock_value_A()
+	{
+		String item = "A";
+		Integer EmptyItemvalue = 50;
+		CalculateStockPrice calculateStockPrice = new CalculateStockPrice();
+		Integer totalPrice = calculateStockPrice.getTotalPriceByItem(item);
+		assertEquals(totalPrice, EmptyItemvalue);
+	}
+	
 }

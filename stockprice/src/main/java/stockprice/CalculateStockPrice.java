@@ -10,7 +10,11 @@ package stockprice;
 public class CalculateStockPrice {
 
 	public Integer getTotalPriceByItem(String item) {
-		return 0;
+
+		Integer itemPrice = 0;
+		if (item.equals("A"))
+			return itemPrice = 50;
+		return itemPrice;
 	}
 
 	

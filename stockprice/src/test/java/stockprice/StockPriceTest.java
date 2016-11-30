@@ -5,22 +5,14 @@ import org.junit.Test;
 
 public class StockPriceTest {
 
-	@Test
-	public void stock_value_empty() {
-		String item = "";
-		Integer EmptyItemvalue = 0;
-		CalculateStockPrice calculateStockPrice = new CalculateStockPrice();
-		Integer totalPrice = calculateStockPrice.getTotalPriceByItem(item);
-		assertEquals(totalPrice, EmptyItemvalue);
-	}
 	
 	@Test
 	public void total_price_stock_value_A()
 	{
 		String item = "A";
 		Integer EmptyItemvalue = 50;
-		CalculateStockPrice calculateStockPrice = new CalculateStockPrice();
-		Integer totalPrice = calculateStockPrice.getTotalPriceByItem(item);
+		CalculateStockPrice calculateStockPrice = new StockA();
+		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
 		assertEquals(totalPrice, EmptyItemvalue);
 	}
 	
@@ -29,8 +21,8 @@ public class StockPriceTest {
 	{
 		String item = "B";
 		Integer EmptyItemvalue = 30;
-		CalculateStockPrice calculateStockPrice = new CalculateStockPrice();
-		Integer totalPrice = calculateStockPrice.getTotalPriceByItem(item);
+		CalculateStockPrice calculateStockPrice = new StockB();
+		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
 		assertEquals(totalPrice, EmptyItemvalue);
 	}
 	
@@ -39,8 +31,8 @@ public class StockPriceTest {
 	{
 		String item = "C";
 		Integer EmptyItemvalue = 20;
-		CalculateStockPrice calculateStockPrice = new CalculateStockPrice();
-		Integer totalPrice = calculateStockPrice.getTotalPriceByItem(item);
+		CalculateStockPrice calculateStockPrice = new StockC();
+		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
 		assertEquals(totalPrice, EmptyItemvalue);
 	}
 	

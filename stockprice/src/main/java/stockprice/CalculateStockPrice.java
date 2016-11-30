@@ -14,6 +14,9 @@ public class CalculateStockPrice {
 		Integer itemPrice = 0;
 		if (item.equals("A"))
 			return itemPrice = 50;
+		else if (item.equals("B"))
+			return itemPrice = 30;
+		
 		return itemPrice;
 	}
 

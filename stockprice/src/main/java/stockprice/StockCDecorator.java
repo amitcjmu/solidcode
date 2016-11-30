@@ -1,10 +1,12 @@
 package stockprice;
 
+import java.util.List;
+
 public class StockCDecorator extends CalculateStockPriceDecorator {
 
 CalculateStockPrice calculateStockPrice;
 	
-	public StockCDecorator(CalculateStockPrice calculateStockPrice) {
+	public StockCDecorator(CalculateStockPrice calculateStockPrice, List<String> items) {
 		this.calculateStockPrice = calculateStockPrice;
 	}
 	

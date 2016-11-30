@@ -10,6 +10,7 @@ public class PerfectNumberTest {
 	@Test
 	public void testPerfectNumber() {
 		Integer number = 6;
-		perfectNumber.findPerfectNumber(6);
+		Boolean isPerfectNumber = perfectNumber.findPerfectNumber(number);
+		assertEquals(true, isPerfectNumber);
 	}
 }

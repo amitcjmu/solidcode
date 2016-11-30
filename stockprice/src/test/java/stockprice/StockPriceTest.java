@@ -36,4 +36,14 @@ public class StockPriceTest {
 		assertEquals(totalPrice, EmptyItemvalue);
 	}
 	
+	@Test
+	public void total_price_stock_value_D()
+	{
+		String item = "D";
+		Integer EmptyItemvalue = 15;
+		CalculateStockPrice calculateStockPrice = new StockD();
+		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
+		assertEquals(totalPrice, EmptyItemvalue);
+	}
+	
 }

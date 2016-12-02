@@ -108,65 +108,65 @@ public class StockPriceTest {
 	public void total_price_stock_value_AB()
 	{
 		List<String> items = Arrays.asList("B");
-		Integer stockDAPrice = 80;
+		Integer stockABPrice = 80;
 		CalculateStockPrice calculateStockPrice = new StockA();
 		calculateStockPrice = new StockADecorator(calculateStockPrice, items);
 		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
-		assertEquals(totalPrice, stockDAPrice);
+		assertEquals(totalPrice, stockABPrice);
 	}
 	
 	@Test
 	public void total_price_stock_value_ABC()
 	{
 		List<String> items = Arrays.asList("B","C");
-		Integer stockDAPrice = 100;
+		Integer stockABCPrice = 100;
 		CalculateStockPrice calculateStockPrice = new StockA();
 		calculateStockPrice = new StockADecorator(calculateStockPrice, items);
 		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
-		assertEquals(totalPrice, stockDAPrice);
+		assertEquals(totalPrice, stockABCPrice);
 	}
 	
 	@Test
 	public void total_price_stock_value_BAC()
 	{
 		List<String> items = Arrays.asList("A","C");
-		Integer stockDAPrice = 100;
+		Integer stockBACPrice = 100;
 		CalculateStockPrice calculateStockPrice = new StockB();
 		calculateStockPrice = new StockBDecorator(calculateStockPrice, items);
 		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
-		assertEquals(totalPrice, stockDAPrice);
+		assertEquals(totalPrice, stockBACPrice);
 	}
 	
 	@Test
 	public void total_price_stock_value_ABCD()
 	{
 		List<String> items = Arrays.asList("B","C","D");
-		Integer stockDAPrice = 115;
+		Integer stockABCDPrice = 115;
 		CalculateStockPrice calculateStockPrice = new StockA();
 		calculateStockPrice = new StockADecorator(calculateStockPrice, items);
 		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
-		assertEquals(totalPrice, stockDAPrice);
+		assertEquals(totalPrice, stockABCDPrice);
 	}
 	
 	@Test
 	public void total_price_stock_value_CDBA()
 	{
 		List<String> items = Arrays.asList("D","B","A");
-		Integer stockDAPrice = 115;
+		Integer stockCDBAPrice = 115;
 		CalculateStockPrice calculateStockPrice = new StockC();
 		calculateStockPrice = new StockCDecorator(calculateStockPrice, items);
 		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
-		assertEquals(totalPrice, stockDAPrice);
+		assertEquals(totalPrice, stockCDBAPrice);
 	}
 	
 	@Test
 	public void total_price_stock_value_AAA_discount()
 	{
 		List<String> items = Arrays.asList("A","A");
-		Integer stockDAPrice = 130;
+		Integer stockAAADicountPrice = 130;
 		CalculateStockPrice calculateStockPrice = new StockA();
 		calculateStockPrice = new StockADecorator(calculateStockPrice, items);
 		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
-		assertEquals(totalPrice, stockDAPrice);
+		assertEquals(totalPrice, stockAAADicountPrice);
 	}
 }

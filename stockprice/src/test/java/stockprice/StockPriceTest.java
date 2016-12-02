@@ -60,18 +60,6 @@ public class StockPriceTest {
 	
 	
 	@Test
-	public void total_price_stock_value_BB()
-	{
-		List<String> items = Arrays.asList("B");
-		Integer stockBBPrice = 60;
-		CalculateStockPrice calculateStockPrice = new StockB();
-		calculateStockPrice = new StockBDecorator(calculateStockPrice, items);
-		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
-		assertEquals(totalPrice, stockBBPrice);
-	}
-	
-	
-	@Test
 	public void total_price_stock_value_CC()
 	{
 		List<String> items = Arrays.asList("C");
@@ -168,5 +156,16 @@ public class StockPriceTest {
 		calculateStockPrice = new StockADecorator(calculateStockPrice, items);
 		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
 		assertEquals(totalPrice, stockAAADicountPrice);
+	}
+	
+	@Test
+	public void total_price_stock_value_BB_discount()
+	{
+		List<String> items = Arrays.asList("B");
+		Integer stockBBPrice = 45;
+		CalculateStockPrice calculateStockPrice = new StockB();
+		calculateStockPrice = new StockBDecorator(calculateStockPrice, items);
+		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
+		assertEquals(totalPrice, stockBBPrice);
 	}
 }

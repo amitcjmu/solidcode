@@ -158,4 +158,15 @@ public class StockPriceTest {
 		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
 		assertEquals(totalPrice, stockDAPrice);
 	}
+	
+	@Test
+	public void total_price_stock_value_AAA_discount()
+	{
+		List<String> items = Arrays.asList("A","A");
+		Integer stockDAPrice = 130;
+		CalculateStockPrice calculateStockPrice = new StockA();
+		calculateStockPrice = new StockADecorator(calculateStockPrice, items);
+		Integer totalPrice = calculateStockPrice.getTotalPriceByItem();
+		assertEquals(totalPrice, stockDAPrice);
+	}
 }

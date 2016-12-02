@@ -12,7 +12,6 @@ import java.util.List;
 public class StockDDecorator extends CalculateStockPriceDecorator {
 
 CalculateStockPrice calculateStockPrice;
-List<String> items;
 	
 	public StockDDecorator(CalculateStockPrice calculateStockPrice, List<String> items) {
 		this.calculateStockPrice = calculateStockPrice;
@@ -27,11 +26,4 @@ List<String> items;
 		return calculateStockPrice.getTotalPriceByItem() + addStocks() ;
 	}
 
-	public Integer addStocks(){
-		int totalPrice=0;
-		for (String item: items){
-			totalPrice += Integer.parseInt(StockMap.valueOf(item).toString());
-		}
-		return totalPrice;
-	}
 }

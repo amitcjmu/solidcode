@@ -10,6 +10,12 @@ public class NumberToWordsTest {
 	public void should_convert_0_to_word() {
 		NumberToWordsConvertor convertor = new NumberToWordsConvertor();
 		assertEquals("Zero", convertor.getWordsForNumber(0));
+	}
+	
+	@Test
+	public void should_convert_1_to_word() {
+		NumberToWordsConvertor convertor = new NumberToWordsConvertor();
+		assertEquals("One", convertor.getWordsForNumber(1));
 
 	}
 }

@@ -4,9 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NumberToWordsConvertor {
-	String one[] = { "zero", "one", "two", "three", "four", "five", " " + "six", "seven", "eight", "nine",
-			"ten", "eleven", "twelve", " " + "thirteen", "fourteen", "fifteen", "sixteen", "seventeen",
-			"eighteen", "nineteen"};
+	String one[] = { " ","one", " two", "three", "four", "five", " " + "six", "seven", "eight", "nine",
+			"ten", "eleven", "twelve", " " + "thirteen", "fourteen", "fifteen", " sixteen", "seventeen",
+			"eighteen", "nineteen" };
+
+	String ten[] = { " ", " ", " twenty", " thirty", " forty", " fifty", " sixty", "seventy", " eighty",
+			" ninety" };
+	
 	List<String> map = new ArrayList<String>(); 
 
 	public String getWordsForNumber(Integer number) {
@@ -19,10 +23,17 @@ public class NumberToWordsConvertor {
 	}
 	
 	public List<String> numberToWord(Integer number, String word) {
-		map.add(one[number]);	
+		
+		
+		if (number > 19) {
+			map.add(ten[number / 10] + " " + one[number % 10]);
+		} else {
+			map.add(one[number]);
+		}
+
 		if (number > 0)
 			map.add(word);
-		
+
 		return map;
 	}
 
